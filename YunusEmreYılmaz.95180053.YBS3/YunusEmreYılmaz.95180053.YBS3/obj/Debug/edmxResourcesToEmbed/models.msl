@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UretimYonetimSistemiModel2StoreContainer" CdmEntityContainer="UretimYonetimSistemiEntities2">
+    <EntitySetMapping Name="Calisan_Tanimi">
+      <EntityTypeMapping TypeName="UretimYonetimSistemiModel2.Calisan_Tanimi">
+        <MappingFragment StoreEntitySet="Calisan_Tanimi">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Calisan_tc" ColumnName="Calisan_tc" />
+          <ScalarProperty Name="Calisan_ad" ColumnName="Calisan_ad" />
+          <ScalarProperty Name="Calisan_soyad" ColumnName="Calisan_soyad" />
+          <ScalarProperty Name="Calisan_gorevi" ColumnName="Calisan_gorevi" />
+          <ScalarProperty Name="Calisan_saat_maaliyet" ColumnName="Calisan_saat_maaliyet" />
+          <ScalarProperty Name="Calisan_aylik_maaliyet" ColumnName="Calisan_aylik_maaliyet" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Is_Istasyon_Tanimi">
+      <EntityTypeMapping TypeName="UretimYonetimSistemiModel2.Is_Istasyon_Tanimi">
+        <MappingFragment StoreEntitySet="Is_Istasyon_Tanimi">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Istasyon_kod" ColumnName="Istasyon_kod" />
+          <ScalarProperty Name="Istasyon_aciklama" ColumnName="Istasyon_aciklama" />
+          <ScalarProperty Name="Hammadde_ambari" ColumnName="Hammadde_ambari" />
+          <ScalarProperty Name="Istasyon_maaliyet" ColumnName="Istasyon_maaliyet" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Operasyon_Tanimi">
+      <EntityTypeMapping TypeName="UretimYonetimSistemiModel2.Operasyon_Tanimi">
+        <MappingFragment StoreEntitySet="Operasyon_Tanimi">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Operasyon_kodu" ColumnName="Operasyon_kodu" />
+          <ScalarProperty Name="Toplam_operasyon_suresi" ColumnName="Toplam_operasyon_suresi" />
+          <ScalarProperty Name="Islem_suresi" ColumnName="Islem_suresi" />
+          <ScalarProperty Name="Bekleme_suresi" ColumnName="Bekleme_suresi" />
+          <ScalarProperty Name="Tasima_suresi" ColumnName="Tasima_suresi" />
+          <ScalarProperty Name="Operasyon_aciklamasi" ColumnName="Operasyon_aciklamasi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Recete_Tanimi">
+      <EntityTypeMapping TypeName="UretimYonetimSistemiModel2.Recete_Tanimi">
+        <MappingFragment StoreEntitySet="Recete_Tanimi">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Ana_urun_kodu" ColumnName="Ana_urun_kodu" />
+          <ScalarProperty Name="Recete_aciklama" ColumnName="Recete_aciklama" />
+          <ScalarProperty Name="Satir_sayisi" ColumnName="Satir_sayisi" />
+          <ScalarProperty Name="Recete_miktar" ColumnName="Recete_miktar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="UretimYonetimSistemiModel2.users">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="kullanici_adi" ColumnName="kullanici_adi" />
+          <ScalarProperty Name="sifre" ColumnName="sifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

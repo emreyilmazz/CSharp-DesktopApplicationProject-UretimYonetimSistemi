@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UretimYonetimSistemiModel2.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Calisan_Tanimi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Calisan_tc" Type="varchar" MaxLength="50" />
+    <Property Name="Calisan_ad" Type="varchar" MaxLength="50" />
+    <Property Name="Calisan_soyad" Type="varchar" MaxLength="50" />
+    <Property Name="Calisan_gorevi" Type="varchar" MaxLength="50" />
+    <Property Name="Calisan_saat_maaliyet" Type="varchar" MaxLength="50" />
+    <Property Name="Calisan_aylik_maaliyet" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Is_Istasyon_Tanimi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Istasyon_kod" Type="varchar" MaxLength="50" />
+    <Property Name="Istasyon_aciklama" Type="varchar" MaxLength="50" />
+    <Property Name="Hammadde_ambari" Type="varchar" MaxLength="50" />
+    <Property Name="Istasyon_maaliyet" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Operasyon_Tanimi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Operasyon_kodu" Type="varchar" MaxLength="50" />
+    <Property Name="Toplam_operasyon_suresi" Type="varchar" MaxLength="50" />
+    <Property Name="Islem_suresi" Type="varchar" MaxLength="50" />
+    <Property Name="Bekleme_suresi" Type="varchar" MaxLength="50" />
+    <Property Name="Tasima_suresi" Type="varchar" MaxLength="50" />
+    <Property Name="Operasyon_aciklamasi" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Recete_Tanimi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ana_urun_kodu" Type="varchar" MaxLength="50" />
+    <Property Name="Recete_aciklama" Type="varchar" MaxLength="50" />
+    <Property Name="Satir_sayisi" Type="varchar" MaxLength="50" />
+    <Property Name="Recete_miktar" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kullanici_adi" Type="varchar" MaxLength="50" />
+    <Property Name="sifre" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="UretimYonetimSistemiModel2StoreContainer">
+    <EntitySet Name="Calisan_Tanimi" EntityType="Self.Calisan_Tanimi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Is_Istasyon_Tanimi" EntityType="Self.Is_Istasyon_Tanimi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Operasyon_Tanimi" EntityType="Self.Operasyon_Tanimi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Recete_Tanimi" EntityType="Self.Recete_Tanimi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UretimYonetimSistemiModel2" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Calisan_Tanimi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Calisan_tc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Calisan_ad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Calisan_soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Calisan_gorevi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Calisan_saat_maaliyet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Calisan_aylik_maaliyet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Is_Istasyon_Tanimi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Istasyon_kod" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Istasyon_aciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Hammadde_ambari" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Istasyon_maaliyet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Operasyon_Tanimi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Operasyon_kodu" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Toplam_operasyon_suresi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Islem_suresi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Bekleme_suresi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tasima_suresi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Operasyon_aciklamasi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Recete_Tanimi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ana_urun_kodu" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Recete_aciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Satir_sayisi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Recete_miktar" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kullanici_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="UretimYonetimSistemiEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Calisan_Tanimi" EntityType="Self.Calisan_Tanimi" />
+    <EntitySet Name="Is_Istasyon_Tanimi" EntityType="Self.Is_Istasyon_Tanimi" />
+    <EntitySet Name="Operasyon_Tanimi" EntityType="Self.Operasyon_Tanimi" />
+    <EntitySet Name="Recete_Tanimi" EntityType="Self.Recete_Tanimi" />
+    <EntitySet Name="users" EntityType="Self.users" />
+  </EntityContainer>
+</Schema>

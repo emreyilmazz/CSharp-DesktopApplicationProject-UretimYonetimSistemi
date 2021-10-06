@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="UretimYonetimSistemiModel2.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Calisan_Tanimi">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Calisan_tc" Type="varchar" MaxLength="50" />
+          <Property Name="Calisan_ad" Type="varchar" MaxLength="50" />
+          <Property Name="Calisan_soyad" Type="varchar" MaxLength="50" />
+          <Property Name="Calisan_gorevi" Type="varchar" MaxLength="50" />
+          <Property Name="Calisan_saat_maaliyet" Type="varchar" MaxLength="50" />
+          <Property Name="Calisan_aylik_maaliyet" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Is_Istasyon_Tanimi">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Istasyon_kod" Type="varchar" MaxLength="50" />
+          <Property Name="Istasyon_aciklama" Type="varchar" MaxLength="50" />
+          <Property Name="Hammadde_ambari" Type="varchar" MaxLength="50" />
+          <Property Name="Istasyon_maaliyet" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Operasyon_Tanimi">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Operasyon_kodu" Type="varchar" MaxLength="50" />
+          <Property Name="Toplam_operasyon_suresi" Type="varchar" MaxLength="50" />
+          <Property Name="Islem_suresi" Type="varchar" MaxLength="50" />
+          <Property Name="Bekleme_suresi" Type="varchar" MaxLength="50" />
+          <Property Name="Tasima_suresi" Type="varchar" MaxLength="50" />
+          <Property Name="Operasyon_aciklamasi" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Recete_Tanimi">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ana_urun_kodu" Type="varchar" MaxLength="50" />
+          <Property Name="Recete_aciklama" Type="varchar" MaxLength="50" />
+          <Property Name="Satir_sayisi" Type="varchar" MaxLength="50" />
+          <Property Name="Recete_miktar" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="users">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="kullanici_adi" Type="varchar" MaxLength="50" />
+          <Property Name="sifre" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="UretimYonetimSistemiModel2StoreContainer">
+          <EntitySet Name="Calisan_Tanimi" EntityType="Self.Calisan_Tanimi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Is_Istasyon_Tanimi" EntityType="Self.Is_Istasyon_Tanimi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Operasyon_Tanimi" EntityType="Self.Operasyon_Tanimi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Recete_Tanimi" EntityType="Self.Recete_Tanimi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="UretimYonetimSistemiModel2" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Calisan_Tanimi">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Calisan_tc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Calisan_ad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Calisan_soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Calisan_gorevi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Calisan_saat_maaliyet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Calisan_aylik_maaliyet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Is_Istasyon_Tanimi">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Istasyon_kod" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Istasyon_aciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Hammadde_ambari" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Istasyon_maaliyet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Operasyon_Tanimi">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Operasyon_kodu" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Toplam_operasyon_suresi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Islem_suresi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Bekleme_suresi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Tasima_suresi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Operasyon_aciklamasi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Recete_Tanimi">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ana_urun_kodu" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Recete_aciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Satir_sayisi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Recete_miktar" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="users">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kullanici_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="UretimYonetimSistemiEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Calisan_Tanimi" EntityType="Self.Calisan_Tanimi" />
+          <EntitySet Name="Is_Istasyon_Tanimi" EntityType="Self.Is_Istasyon_Tanimi" />
+          <EntitySet Name="Operasyon_Tanimi" EntityType="Self.Operasyon_Tanimi" />
+          <EntitySet Name="Recete_Tanimi" EntityType="Self.Recete_Tanimi" />
+          <EntitySet Name="users" EntityType="Self.users" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="UretimYonetimSistemiModel2StoreContainer" CdmEntityContainer="UretimYonetimSistemiEntities2">
+          <EntitySetMapping Name="Calisan_Tanimi">
+            <EntityTypeMapping TypeName="UretimYonetimSistemiModel2.Calisan_Tanimi">
+              <MappingFragment StoreEntitySet="Calisan_Tanimi">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Calisan_tc" ColumnName="Calisan_tc" />
+                <ScalarProperty Name="Calisan_ad" ColumnName="Calisan_ad" />
+                <ScalarProperty Name="Calisan_soyad" ColumnName="Calisan_soyad" />
+                <ScalarProperty Name="Calisan_gorevi" ColumnName="Calisan_gorevi" />
+                <ScalarProperty Name="Calisan_saat_maaliyet" ColumnName="Calisan_saat_maaliyet" />
+                <ScalarProperty Name="Calisan_aylik_maaliyet" ColumnName="Calisan_aylik_maaliyet" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Is_Istasyon_Tanimi">
+            <EntityTypeMapping TypeName="UretimYonetimSistemiModel2.Is_Istasyon_Tanimi">
+              <MappingFragment StoreEntitySet="Is_Istasyon_Tanimi">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Istasyon_kod" ColumnName="Istasyon_kod" />
+                <ScalarProperty Name="Istasyon_aciklama" ColumnName="Istasyon_aciklama" />
+                <ScalarProperty Name="Hammadde_ambari" ColumnName="Hammadde_ambari" />
+                <ScalarProperty Name="Istasyon_maaliyet" ColumnName="Istasyon_maaliyet" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Operasyon_Tanimi">
+            <EntityTypeMapping TypeName="UretimYonetimSistemiModel2.Operasyon_Tanimi">
+              <MappingFragment StoreEntitySet="Operasyon_Tanimi">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Operasyon_kodu" ColumnName="Operasyon_kodu" />
+                <ScalarProperty Name="Toplam_operasyon_suresi" ColumnName="Toplam_operasyon_suresi" />
+                <ScalarProperty Name="Islem_suresi" ColumnName="Islem_suresi" />
+                <ScalarProperty Name="Bekleme_suresi" ColumnName="Bekleme_suresi" />
+                <ScalarProperty Name="Tasima_suresi" ColumnName="Tasima_suresi" />
+                <ScalarProperty Name="Operasyon_aciklamasi" ColumnName="Operasyon_aciklamasi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Recete_Tanimi">
+            <EntityTypeMapping TypeName="UretimYonetimSistemiModel2.Recete_Tanimi">
+              <MappingFragment StoreEntitySet="Recete_Tanimi">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Ana_urun_kodu" ColumnName="Ana_urun_kodu" />
+                <ScalarProperty Name="Recete_aciklama" ColumnName="Recete_aciklama" />
+                <ScalarProperty Name="Satir_sayisi" ColumnName="Satir_sayisi" />
+                <ScalarProperty Name="Recete_miktar" ColumnName="Recete_miktar" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="users">
+            <EntityTypeMapping TypeName="UretimYonetimSistemiModel2.users">
+              <MappingFragment StoreEntitySet="users">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="kullanici_adi" ColumnName="kullanici_adi" />
+                <ScalarProperty Name="sifre" ColumnName="sifre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
