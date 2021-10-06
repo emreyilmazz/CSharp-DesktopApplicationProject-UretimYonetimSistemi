@@ -1,1 +1,1 @@
-# C-Desktop-Application-Project---retim-Y-netim-Sistemi
+C#-DesktopApplicationProject-UretimYonetimSistemi
